@@ -1,0 +1,59 @@
+<%- include('partials/header-logged-in') -%>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6">
+                <div class="mt-5">
+                    <h2>Add a new project</h2>
+                    <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="title" name="title">
+                        </div>
+                        <div class="mb-3">
+                            <label for="caption" class="form-label">Caption</label>
+                            <input type="text" class="form-control" id="caption" name="caption">
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Longer Description</label>
+                            <textarea class="form-control" id="description" rows="10" name="description"></textarea>
+                        </div>
+                        <!-- <div class="mb-3">
+                            <label for="imgUpload" class="form-label">Image</label>
+                            <input type="file" class="form-control" id="imageUpload" name="file"> 
+                        </div> -->
+
+                        <!-- Radio buttons -->
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="projecttype" id="travel"
+                                    value="travel" checked>
+                                <label class="form-check-label" for="travel">
+                                    Traveling Project
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="projecttype" id="collect"
+                                    value="collect">
+                                <label class="form-check-label" for="collect">
+                                    Collection Project (Mailart Call)
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" value="Upload" class="btn btn-outline-info">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-6">
+                <img src="/imgs/project1.jpg"
+                    alt="Illustration of a person writing in a journal while a cat rests on the table nearby"
+                    class="img-fluid rounded">
+                <!-- <div class="row justify-content-center mt-5">
+                    <a href="/feed" role="button">Return to Feed</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <%- include('partials/footer') -%>
